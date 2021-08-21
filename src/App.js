@@ -1,11 +1,11 @@
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Wrapper from './components/UI/Container/Container';
-import NavbarMenu from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <Wrapper>
-      <NavbarMenu />
+      <Header />
     </Wrapper>
   );
 }
