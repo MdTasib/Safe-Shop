@@ -9,7 +9,7 @@ const SearchBox = () => {
         placeholder="&#128269; Search Here"
         aria-label="Search"
       />
-      <Button variant="outline-dark">Search</Button>
+      <Button variant="dark">Search</Button>
     </Form>
   );
 };
