@@ -1,10 +1,13 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
 const Manage = () => {
   return (
-    <div>
-      manage
-    </div>
+    <Card>
+      <Card.Header>Manage Books</Card.Header>
+      <Card.Body>
+      </Card.Body>
+    </Card>
   );
 };
 

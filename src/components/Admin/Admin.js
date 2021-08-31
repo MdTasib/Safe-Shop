@@ -12,14 +12,14 @@ import Edit from './Edit/Edit';
 const Admin = () => {
   return (
     <Row>
-      <Col className='col-md-4 bg-dark'>
+      <Col className='col-md-4 bg-dark p-3'>
         <Navbar.Brand as={Link} to="/"><img src={logo} alt="" width={60} /> SAFE-SHOP</Navbar.Brand>
         <Nav.Link as={Link} to="/admin"><img src={manage} alt="" width={40} /> Manage Book</Nav.Link>
         <Nav.Link as={Link} to="/admin/add"><img src={add} alt="" width={40} /> Add Book</Nav.Link>
         <Nav.Link as={Link} to="/admin/edit"><img src={edit} alt="" width={40} /> Edit Book</Nav.Link>
       </Col>
 
-      <Col className='col-md-8'>
+      <Col className='col-md-8 bg-light p-3'>
         <Switch>
           <Route path="/admin/add"><Add /></Route>
           <Route path="/admin/edit"><Edit /></Route>
