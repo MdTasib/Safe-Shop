@@ -8,7 +8,7 @@ const Product = ({ product }) => {
         <Card.Img variant="top" src={product.imageUrl} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
-          <Card.Text>{product.author}</Card.Text>
+          <Card.Text className='text-secondary'>{product.author}</Card.Text>
           <div className="d-flex justify-content-between align-items-end">
             <Card.Title>${product.price}</Card.Title>
             <Button variant="dark">Buy Now</Button>
