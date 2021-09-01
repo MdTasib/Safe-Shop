@@ -5,7 +5,7 @@ const Product = ({ product }) => {
   return (
     <Col xs={12} md={4} sm={6}>
       <Card>
-        <Card.Img variant="top" src={product.imageUrl} />
+        <Card.Img variant="top" src={product.imageUrl} height={350} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text className='text-secondary'>{product.author}</Card.Text>
