@@ -10,6 +10,8 @@ import Add from './Add/Add';
 import Edit from './Edit/Edit';
 
 const Admin = () => {
+  document.title = 'ADMIN PAGE';
+
   return (
     <Row>
       <Col className='col-md-4 bg-dark p-3'>

@@ -13,6 +13,11 @@ import Home from './components/Home/Home';
 import Orders from './components/Orders/Orders';
 import Login from './components/Login/Login';
 import logo from './images/avater.png';
+import shopping from './images/shopcart.png';
+import PrivateRoute from './components/Private_Route/PrivateRoute';
+import Checkout from './components/Checkout/Checkout';
+import NotFound from './components/404/404';
+import Check from './components/Check/Check';
 
 export const UserContext = createContext()
 
@@ -33,20 +38,39 @@ function App() {
                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 <Nav.Link as={Link} to="/orders">Orders</Nav.Link>
                 <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
-                <Nav.Link as={Link} to="/deals">Deals</Nav.Link>
+                <Nav.Link as={Link} to="/checkout">Checkout <img src={shopping} alt="" width={30} /></Nav.Link>
                 <Nav.Link as={Link} to="/login">
-                  <Button className='btn-dark'>Login</Button>
+                  <Button className='btn-dark'>{loggedInUser.email ? 'Logout' : 'Login'}</Button>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
           <SearchBox />
           <Switch>
-            <Route path="/orders"><Orders /></Route>
-            <Route path="/admin"><Admin /></Route>
-            <Route path="/login"><Login /></Route>
-            <Route path='/home'><Home /></Route>
-            <Route exact path="/"><Home /></Route>
+            <PrivateRoute path="/orders">
+              <Orders />
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
+              <Admin />
+            </PrivateRoute>
+            <PrivateRoute path="/checkout/:id">
+              <Checkout />
+            </PrivateRoute>
+            <PrivateRoute path="/checkout">
+              <Check />
+            </PrivateRoute>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path='/home'>
+              <Home />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path='*'>
+              <NotFound />
+            </Route>
           </Switch>
         </Router>
       </Wrapper>

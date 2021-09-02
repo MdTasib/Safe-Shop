@@ -5,6 +5,7 @@ import spinner from '../../images/loding.gif';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
+  document.title = 'HOME';
 
   useEffect(() => {
     fetch('http://localhost:5000/books')
