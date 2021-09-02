@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Table, Alert } from 'react-bootstrap';
+import { Card, Table } from 'react-bootstrap';
 import spinner from '../../../images/loding.gif';
 import edit from '../../../images/edit2.png';
 
