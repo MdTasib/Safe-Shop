@@ -7,14 +7,14 @@ const Manage = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/books')
+    fetch('https://thawing-refuge-75108.herokuapp.com/books')
       .then(response => response.json())
       .then(data => setBooks(data));
   }, []);
 
   // delete book
   const deleteBook = (book, id) => {
-    fetch(`http://localhost:5000/deleteBook/${id}`, {
+    fetch(`https://thawing-refuge-75108.herokuapp.com/deleteBook/${id}`, {
       method: 'DELETE'
     })
       .then(response => response.json())

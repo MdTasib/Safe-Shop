@@ -10,7 +10,7 @@ const Checkout = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:5000/books')
+    fetch('https://thawing-refuge-75108.herokuapp.com/books')
       .then(response => response.json())
       .then(data => {
         const selectedProduct = data.find(pd => pd._id === id);
